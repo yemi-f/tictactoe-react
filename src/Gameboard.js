@@ -20,7 +20,7 @@ const Gameboard = ({ addToArray, boardArray, winner }) => {
     })
 
     return (
-        <div>
+        <div className="gameboard-complete mx-auto">
             {gameboardRows}
         </div>
     )

@@ -9,3 +9,44 @@ body {
 .square-btn:focus {
   outline: 0;
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation:landscape) {
+  .gameboard-complete {
+    width: 216px;
+  }
+
+  .square-btn {
+    height: 64px !important;
+    width: 64px !important;
+  }
+
+  .reset-div {
+    margin-bottom: 0px !important;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .gameboard-complete {
+    width: 216px;
+  }
+
+  .square-btn {
+    height: 64px !important;
+    width: 64px !important;
+  }
+}
+
+@media screen and (min-device-width: 411px) and (max-device-width: 823px) and (orientation: landscape) {
+  .gameboard-complete {
+    width: 216px;
+  }
+
+  .square-btn {
+    height: 64px !important;
+    width: 64px !important;
+  }
+
+  .reset-div {
+    margin-bottom: 0px !important;
+  }
+}
