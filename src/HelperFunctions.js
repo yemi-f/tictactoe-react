@@ -13,7 +13,7 @@ export const getWinner = (board) => {
 
     for (let i = 0; i < winningLines.length; i++) {
         if (winningLines[i] === "XXX" || winningLines[i] === "OOO") {
-            changeSquareColour(getWinningSquaresArray(i))
+            changeSquareColour(getWinningSquaresArray(i), winningLines[i][0])
             return winningLines[i][0] + " wins";
         }
     }
@@ -51,11 +51,12 @@ export const getWinningSquaresArray = (winningLinesIndex) => {
     return []
 }
 
-export const changeSquareColour = (winningArray) => {
+export const changeSquareColour = (winningArray, winnerText) => {
 
-    const winningSquaresColour = "#BFBFBF"
+    const winningOcolour = "#FAFAFF";
+    const winningXcolour = "#FFFAFA"
 
     winningArray.forEach((squareIndex) => {
-        document.getElementById("square-" + squareIndex).style.backgroundColor = winningSquaresColour;
+        document.getElementById("square-" + squareIndex).style.backgroundColor = winnerText === "X" ? winningXcolour : winningOcolour
     })
 }

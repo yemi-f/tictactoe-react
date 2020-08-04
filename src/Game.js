@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import DisplayWinner from './DisplayWinner';
-import Clear from './Clear';
 import Gameboard from "./Gameboard"
 import { allSquaresOccupied, getWinner } from "./HelperFunctions"
+import ResetGameboard from './ResetGameboard';
 
 const Game = () => {
 
@@ -26,10 +26,10 @@ const Game = () => {
     }
 
     const clearBoard = () => {
-        const defaultBtnColour = "#EFEFEF"
+        const initialBtnColour = "#FFFFFF"
         setBoardArray(Array(9).fill(""));
         [0, 1, 2, 3, 4, 5, 6, 7, 8].forEach(squareIndex => {
-            document.getElementsByClassName("square-btn")[squareIndex].style.backgroundColor = defaultBtnColour;
+            document.getElementsByClassName("square-btn")[squareIndex].style.backgroundColor = initialBtnColour;
         })
         setChar("X")
     }
@@ -38,7 +38,7 @@ const Game = () => {
         <div className="text-center mx-auto">
             <DisplayWinner winner={winner} />
             <Gameboard addToArray={addToArray} boardArray={boardArray} winner={winner} />
-            <Clear clearBoard={clearBoard} />
+            <ResetGameboard clearBoard={clearBoard} />
         </div>
     )
 }
