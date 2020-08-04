@@ -26,7 +26,11 @@ const Game = () => {
     }
 
     const clearBoard = () => {
+        const defaultBtnColour = "#EFEFEF"
         setBoardArray(Array(9).fill(""));
+        [0, 1, 2, 3, 4, 5, 6, 7, 8].forEach(squareIndex => {
+            document.getElementsByClassName("square-btn")[squareIndex].style.backgroundColor = defaultBtnColour;
+        })
         setChar("X")
     }
 

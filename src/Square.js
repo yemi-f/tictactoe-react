@@ -8,7 +8,7 @@ const Square = ({ addToArray, boardArray, index }) => {
     }
 
     return (
-        <button className="" id={"square-" + index}
+        <button className="border-0 m-1 rounded-lg square-btn" id={"square-" + index}
             onClick={() => addToArray(index)}
             style={squareStyle}>
             <h1 className="">{boardArray[index]}</h1>

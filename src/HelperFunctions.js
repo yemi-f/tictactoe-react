@@ -52,7 +52,10 @@ export const getWinningSquaresArray = (winningLinesIndex) => {
 }
 
 export const changeSquareColour = (winningArray) => {
+
+    const winningSquaresColour = "#BFBFBF"
+
     winningArray.forEach((squareIndex) => {
-        document.getElementById("square-" + squareIndex).style.backgroundColor = "red"
+        document.getElementById("square-" + squareIndex).style.backgroundColor = winningSquaresColour;
     })
 }
