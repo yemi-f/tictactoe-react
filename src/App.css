@@ -5,3 +5,7 @@ body {
 .restart-text:active {
   text-shadow: none !important;
 }
+
+.square-btn:focus {
+  outline: 0;
+}
